@@ -2,6 +2,9 @@
   import TodoItem from "./TodoItem.svelte";
 
   export let todos;
+  export let onHandleCheck;
+  export let onHandleRemove;
+  export let onHandleModify;
 
   $: remaining = todos.filter((t) => !t.checked).length;
 </script>
@@ -14,6 +17,6 @@
   {/if}
   <br>
   {#each todos as todo (todo.id)}
-    <TodoItem {todo} />
+    <TodoItem {todo} {onHandleCheck} {onHandleRemove} {onHandleModify}/>
   {/each}
 </div>

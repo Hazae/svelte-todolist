@@ -1,5 +1,8 @@
 <script>
   export let todo;
+  export let onHandleCheck;
+  export let onHandleRemove;
+  export let onHandleModify;
 
   let placeholder = "할 일을 입력해주세요";
 </script>
@@ -35,11 +38,16 @@
       class="input"
       type="text"
       {placeholder}
-      bind:value={todo.text} />
-    <span class="icon is-small is-left">
+      bind:value={todo.text}
+      on:keyup = "{e => onHandleModify(todo.id, e.target.value)}"
+    />
+    <span
+      class="icon is-small is-left"
+      on:click = "{() => onHandleCheck(todo.id)}"
+    >
       <i class="fas fa-check"></i>
     </span>
-    <span class="icon is-small is-right">
+    <span class="icon is-small is-right" on:click = "{() => onHandleRemove(todo.id)}">
       <i class="fas fa-trash"></i>
     </span>
   </div>
