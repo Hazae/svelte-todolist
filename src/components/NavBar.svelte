@@ -2,7 +2,7 @@
   <div class="container">
     <div class="navbar-brand">
       <div class="navbar-item">
-        <img src="./public/favicon.png" alt="Logo">
+        <img src="favicon.png" alt="logo">
       </div>
     </div>
     <div class="navbar-menu">
@@ -10,7 +10,7 @@
         <span class="navbar-item">
           <a
             class="button is-success is-inverted"
-            href="https://github.com/wormwlrm/svelte-todo-list"
+            href="https://github.com/Hazae/svelte-todolist"
             target="_blank"
           >
             <span class="icon">
